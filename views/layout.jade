@@ -2,7 +2,11 @@ doctype 5
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    block scripts
+
+    link(rel='stylesheet', href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css")	
+    link(rel='stylesheet', href="/stylesheets/style.css")
+    script(type='text/javascript', src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js")
     
   body
     block content
