@@ -8,13 +8,14 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
-
+var engine = require('ejs-locals');
 var app = express();
 
 // all environments
+app.engine('ejs', engine);
 app.set('port', process.env.PORT || 8080);
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
 app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
