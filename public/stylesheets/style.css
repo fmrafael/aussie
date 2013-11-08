@@ -1,0 +1,57 @@
+html, body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+
+
+
+
+
+ @media (min-width: 980px) { 
+        body {
+         padding-top: 10px;
+        }
+       .linediv-l {
+         border-right: 1px white solid;
+        }
+       .linediv-r {
+         border-left: 1px white solid;
+       }
+      }
+
+      /* Landscape phones and down */
+      @media (max-width: 480px) { 
+       .copy {
+         padding: 2.5% 10%;
+       }
+       .linediv-l {
+         border-bottom: 1px white solid;
+       }
+       .linediv-r {
+         border-top: 1px white solid;
+       }
+      }
+
+
+
+
+#mkt{
+        text-align:center;
+        padding-top:90px;
+
+}
+
+
+#footer{
+	background: url('../images/footer.png');
+position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+	margin-bottom:20px;
+	text-align:center;}
