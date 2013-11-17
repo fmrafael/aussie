@@ -11,6 +11,13 @@ var path = require('path');
 var engine = require('ejs-locals');
 var app = express();
 
+//twilio
+var accountSid = 'AC90b1a115228aae9f10c2f39653e6f7b8';
+var authToken = '6f85775f3c570b2fa620fa496d065609';
+var client = require('twilio')(accountSid, authToken);
+
+
+
 // all environments
 app.engine('ejs', engine);
 app.set('port', process.env.PORT || 8080);
@@ -30,7 +37,19 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+app.post('/voice', routes.voice);
+
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
+});
+
+
+client.calls.create ({
+	url: "http://ebopi.me/voice.xml",
+	from: "+551149495044",
+	to: "+5511983600707"
+}, function(err,call) {
+	process.stdout.write(call.sid);
 });

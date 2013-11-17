@@ -9,6 +9,7 @@
     "express": "3.4.2",
     "jade": "*",
     "ejs": "~0.8.4",
-    "ejs-locals": "~1.0.2"
+    "ejs-locals": "~1.0.2",
+    "twilio": "~1.4.0"
   }
 }

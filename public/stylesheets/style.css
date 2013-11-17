@@ -1,5 +1,6 @@
 html, body {
   height: 100%;
+
 }
 
 
@@ -8,6 +9,7 @@ html, body {
 padding:96px ;
 background: url('../images/triangular.png');
 
+background-size:auto 44px no-repeat;
 
 }
 
