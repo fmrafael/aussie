@@ -13,7 +13,7 @@ exports.index = function(req, res){
 exports.voice = function(req, res) {
         var twilio = require('twilio');
 var resp = new twilio.TwimlResponse();
-resp.say({voice:'woman', language:'pt-BR'}, 'me encontre na esquina! Venha sozinho!');
+resp.say({voice:'woman'}, 'me encontre na esquina! Venha sozinho!');
 
 res.writeHead(200, {
 'Content-Type':'text/xml'
