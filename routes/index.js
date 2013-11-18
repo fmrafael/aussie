@@ -10,11 +10,10 @@ exports.index = function(req, res){
 
 
 //twilio voice
-
 exports.voice = function(req, res) {
-	var twilio = require('twilio');
+        var twilio = require('twilio');
 var resp = new twilio.TwimlResponse();
-resp.say({voice:'woman'}, 'ahoy hoy! Testing Twilio and node.js');
+resp.say({voice:'woman', language:'pt-BR'}, 'me encontre na esquina! Venha sozinho!');
 
 res.writeHead(200, {
 'Content-Type':'text/xml'

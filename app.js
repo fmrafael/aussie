@@ -37,7 +37,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/users', user.list);
-app.get('/voice', routes.voice);
+app.post('/voice', routes.voice);
 
 
 
@@ -46,10 +46,10 @@ http.createServer(app).listen(app.get('port'), function(){
 });
 
 
-client.calls.create ({
-	url: "http://www.ebopi.me/voice",
-	from: "+551149495044",
-	to: "+5511983600707"
-}, function(err,call) {
-	process.stdout.write(call.sid);
+client.calls.create({
+    url: "http://ebopi.me/voice",
+    from: "+551149495044",
+    to: "+5511983600707"
+}, function(err, call) {
+    process.stdout.write(call.sid);
 });

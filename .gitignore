@@ -10,7 +10,7 @@ b-cov
 pids
 logs
 results
-
+*.js.swp
 npm-debug.log
 node_modules
 *.~
