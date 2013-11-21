@@ -46,10 +46,3 @@ http.createServer(app).listen(app.get('port'), function(){
 });
 
 
-client.calls.create({
-    url: "http://ebopi.me/voice",
-    from: "+551149495044",
-    to: "+5511982452127"
-}, function(err, call) {
-    process.stdout.write(call.sid);
-});
