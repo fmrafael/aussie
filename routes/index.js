@@ -13,9 +13,9 @@ exports.index = function(req, res){
 exports.voice = function(req, res) {
         var twilio = require('twilio');
 var resp = new twilio.TwimlResponse();
-resp.say('me encontre na esquina! Venha sozinho!', {voice:'woman', language:'pt-BR'})
-.pause({length:3})
-.say('bem-vindo a ebopi. fale o que pensa de nos para que possamos atende-lo cada vez melhor', {voice:'woman', language:'pt-br'})
+resp.say('Obrigado por ligar para a ebÃ³pi' ,{ voice:'woman', language:'pt-BR'})
+.pause({length:1})
+.say('Fique na linha que sua ligaÃ§Ã£o serÃ¡ transferida para um de nossos atendentes', {voice:'woman', language:'pt-br'})
 .dial('+5511983600707');
 
 
@@ -25,4 +25,3 @@ res.writeHead(200, {
 res.end(resp.toString());
 
 };
-
