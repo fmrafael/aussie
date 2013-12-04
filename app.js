@@ -31,7 +31,7 @@ passport.use(new FacebookStrategy({
     callbackURL: "http://www.ebopi.me/auth/facebook/callback"
 },
 function(accessToken, refreshToken, profile, done) {
-    User.findOrCreate( function(err, user) {
+    User.findOrCreate({facebookId: profile.id},  function(err, user) {
       if (err) { return done(err); }
       done(null, user);
     });
